@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ekā</title>
-<style>
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-}
-.container {
-    max-width: 600px;
-    padding: 40px;
-}
-h1 {
-    font-size: 40px;
-    margin-bottom: 24px;
-}
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.85;
-}
-.small {
-    margin-top: 32px;
-    font-size: 14px;
-    opacity: 0.6;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekā | Behavioral Mirror</title>
+    <style>
+        :root {
+            --bg-color: #010B1A; /* Midnight Blue */
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --accent: #007AFF;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at center, #021631 0%, #010B1A 100%);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container { max-width: 600px; }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+        p.tagline { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.5; }
+        
+        .philosophy {
+            margin-top: 60px;
+            padding: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+        }
+        .philosophy h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 20px; }
+        .philosophy p { font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary); }
+
+        .links { margin-top: 40px; display: flex; gap: 20px; font-size: 0.9rem; }
+        .links a { color: var(--accent); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+        .links a:hover { opacity: 1; }
+        
+        /* Subtle Grain Overlay */
+        .grain {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; opacity: 0.02;
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1>Ekā</h1>
-<p>
-Ekā displays a single aggregated number representing how many times a user has interacted with their device today.
-</p>
-<p>
-All processing occurs on-device using Apple’s Screen Time APIs.
-No data is stored, transmitted, logged, or shared.
-</p>
-<p>
-Ekā does not block apps or enforce restrictions.
-</p>
-<p class="small">
-Contact: sasinemani@icloud.com
-</p>
-</div>
+    <div class="grain"></div>
+    <div class="container">
+        <h1>Ekā</h1>
+        <p class="tagline">A behavioral mirror for your digital presence.</p>
+        
+        <div class="philosophy">
+            <h2>The Origin</h2>
+            <p>Inspired by a child's simple question—<i>"Do you know how many times you check your phone?"</i>—Ekā was built to turn raw device data into a moment of mindful reflection.</p>
+            
+            <h2>The Mirror</h2>
+            <p>Unlike standard reports that focus on minutes and limits, Ekā interprets the quality of your attention. By synthesizing interaction patterns into states of Presence, State, and Equilibrium, it helps you reclaim intentionality in a world of digital noise.</p>
+        </div>
+
+        <div class="links">
+            <a href="mailto:your-email@example.com">Support</a>
+            <a href="/eka/privacy">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
 </body>
 </html>
